@@ -6,75 +6,75 @@ import javax.persistence.*;
 @Table(name = "tutorials")
 public class Tutorial {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@Column(name = "title")
-	private String title;
+    @Column(name = "title")
+    private String title;
 
-	@Column(name = "description")
-	private String description;
+    @Column(name = "description")
+    private String description;
 
-	@Column(name = "published")
-	private boolean published;
-
-
-	@Column(name = "launch_date")
-	private String launch_date;
+    @Column(name = "published")
+    private boolean published;
 
 
-	public Tutorial() {
-
-	}
-
-	public Tutorial(String title, String description, boolean published,String launchDate) {
-		this.title = title;
-		this.description = description;
-		this.published = published;
-		this.launch_date = launchDate;
-	}
+    @Column(name = "launch_date")
+    private String launch_date;
 
 
-	public String getLaunch_date() {
-		return launch_date;
-	}
+    public Tutorial() {
 
-	public void setLaunch_date(String launch_date) {
-		this.launch_date = launch_date;
-	}
+    }
 
-	public long getId() {
-		return id;
-	}
+    public Tutorial(String title, String description, boolean published, String launchDate) {
+        this.title = title;
+        this.description = description;
+        this.published = published;
+        this.launch_date = launchDate;
+    }
 
-	public String getTitle() {
-		return title;
-	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getLaunch_date() {
+        return launch_date;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setLaunch_date(String launch_date) {
+        this.launch_date = launch_date;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public boolean isPublished() {
-		return published;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setPublished(boolean isPublished) {
-		this.published = isPublished;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	@Override
-	public String toString() {
-		return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
-	}
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isPublished() {
+        return published;
+    }
+
+    public void setPublished(boolean isPublished) {
+        this.published = isPublished;
+    }
+
+    @Override
+    public String toString() {
+        return "Tutorial [id=" + id + ", title=" + title + "launch_date= " + launch_date + ", desc=" + description + ", published=" + published + "]";
+    }
 
 }
